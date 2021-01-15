@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 
 import { getUser, logout } from './services/userService';
@@ -14,6 +15,8 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 import './App.css';
 
+import { getWeather } from './services/weather-api';
+
 
 function App(props) {
 
@@ -21,21 +24,47 @@ function App(props) {
     user: getUser()
   });
 
-  function handleSignupOrLogin() {
-    setUserState({
-      user: getUser()
-    });
-  }
+      function handleSignupOrLogin() {
+      setUserState({
+        user: getUser()
+     });
+    }
 
-  function handleLogout() {
-    logout();
-    setUserState({ user: null })
-    props.history.push('/');
-  }
+    function handleLogout() {
+      logout();
+      setUserState({ user: null })
+      props.history.push('/');
+    }
+
+    const [ appData, setAppData ] = useState({
+      temp: null,
+      wind: null,
+      description: null,
+      icon: ''
+    });
+  
+    async function getAppData() {
+      const weatherData = await getWeather();
+    
+  
+      setAppData({
+        temp: Math.round(weatherData.main.temp),
+        wind: Math.round(weatherData.wind.speed),
+        description: weatherData.weather[0].description,
+        icon: weatherData.weather[0].icon
+      });
+
+    }
+
+  useEffect(() => {
+    getAppData();
+    console.log('useEffect Called - Component mounted or updated')
+  }, []);
 
   return (
     <div className="App">
       <Header handleLogout={handleLogout} user={userState.user} />
+  
         <main>
           <Switch>
             <Route exact path="/" render={props => 
@@ -59,5 +88,6 @@ function App(props) {
     </div>
   );
 }
+
 
 export default withRouter(App);
