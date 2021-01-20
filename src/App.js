@@ -63,6 +63,7 @@ function App(props) {
 
   return (
     <div className="App">
+      
       <Header handleLogout={handleLogout} user={userState.user} />
   
         <main>
@@ -72,7 +73,7 @@ function App(props) {
             } />
             <Route exact path="/dashboard" render={props => 
               userState.user ?
-                <DashboardPage />
+                <DashboardPage {...props} appData={appData} />
                   :
                 <Redirect to="/login" />
             } />
@@ -91,3 +92,4 @@ function App(props) {
 
 
 export default withRouter(App);
+
