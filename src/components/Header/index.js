@@ -4,7 +4,7 @@ function Header(props) {
     return (
         <header className={styles.Header}>
             <Link to="/">
-                <h1>Project 3</h1>
+                <h1>Super Bowl Special</h1>
             </Link>
             <nav>
                 <ul>

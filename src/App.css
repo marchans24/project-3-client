@@ -2,9 +2,15 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url('../src/imgs/background.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .App main {
   flex-grow: 1;
 }
+
+
 
