@@ -1,4 +1,5 @@
 
+
 function DashboardPage(props) {
     
     return (
@@ -14,8 +15,8 @@ function DashboardPage(props) {
       />
     }</p>
     <h2>Pick Your Team</h2>
-    <button> Kansas City -3</button>
-    <button> Green Bay +3</button>
+    <button onClick={() => props.team('Chiefs')}> Kansas City -3</button>
+    <button onClick={() => props.team('Packers')}> Green Bay +3</button>
         </div>
     );
     

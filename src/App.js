@@ -24,6 +24,8 @@ function App(props) {
     user: getUser()
   });
 
+  const [ team, setTeam ] = useState('Chiefs');
+
       function handleSignupOrLogin() {
       setUserState({
         user: getUser()
@@ -41,17 +43,19 @@ function App(props) {
       wind: null,
       description: null,
       icon: ''
+      
     });
   
     async function getAppData() {
       const weatherData = await getWeather();
-    
+      
   
       setAppData({
         temp: Math.round(weatherData.main.temp),
         wind: Math.round(weatherData.wind.speed),
         description: weatherData.weather[0].description,
         icon: weatherData.weather[0].icon
+        
       });
 
     }
@@ -73,7 +77,7 @@ function App(props) {
             } />
             <Route exact path="/dashboard" render={props => 
               userState.user ?
-                <DashboardPage {...props} appData={appData} />
+                <DashboardPage {...props} appData={appData} team={setTeam} />
                   :
                 <Redirect to="/login" />
             } />
