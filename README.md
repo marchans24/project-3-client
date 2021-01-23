@@ -7,10 +7,10 @@ Users are able to login and pick their projected winner for the Super Bowl. User
 
 
 Wireframe:
-![Wireframe](/Users/marcushansen/Desktop/project-3-client/src/imgs/dashboard.png)
+![Wireframe](./imgs/dashboard.png)
 
 Screenshots:
-![Application](/Users/marcushansen/Desktop/project-3-client/src/imgs/application.png)
+![Application](./imgs/application.png)
 
 
 Technologies Used: HTML, CSS, JavaScript, Express, Express Middleware, Node, Mongoose, Heroku, MongoDB, React
