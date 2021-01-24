@@ -42,7 +42,7 @@ function App(props) {
       temp: null,
       wind: null,
       description: null,
-      icon: ''
+      icon: '',
       
     });
   
@@ -54,7 +54,7 @@ function App(props) {
         temp: Math.round(weatherData.main.temp),
         wind: Math.round(weatherData.wind.speed),
         description: weatherData.weather[0].description,
-        icon: weatherData.weather[0].icon
+        icon: weatherData.weather[0].icon,
         
       });
 
