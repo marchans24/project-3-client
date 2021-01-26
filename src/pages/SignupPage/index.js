@@ -38,6 +38,7 @@ function SignupPage(props) {
                 
                 type="text" 
                 />
+                &nbsp;&nbsp;
                 <label>Last Name:</label>
                 <input 
                 value={formState.lastName} 
@@ -45,6 +46,7 @@ function SignupPage(props) {
                 name="lastName" 
                 type="text" 
                 />
+                &nbsp;&nbsp;
                 <label>Email:</label>
                 <input 
                 value={formState.email} 
@@ -52,6 +54,7 @@ function SignupPage(props) {
                 name="email" 
                 type="email" 
                 />
+                &nbsp;&nbsp;
                 <label>Password:</label>
                 <input 
                 value={formState.password} 
@@ -59,6 +62,7 @@ function SignupPage(props) {
                 name="password" 
                 type="password" 
                 />
+                &nbsp;&nbsp;
                 <button>Sign Up</button>
             </form>
         </div>

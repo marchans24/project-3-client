@@ -48,6 +48,7 @@ function LoginPage(props) {
                     name="email" 
                     type="email" 
                     />
+                    &nbsp;&nbsp;
                 <label>Password:</label>
                     <input 
                     value={formState.password} 
@@ -55,6 +56,7 @@ function LoginPage(props) {
                     name="password" 
                     type="password" 
                     />
+                    &nbsp;&nbsp;
                 <button>Login</button>
             </form>
         </div>
