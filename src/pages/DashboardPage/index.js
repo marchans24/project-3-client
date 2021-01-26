@@ -16,13 +16,23 @@ function DashboardPage(props) {
       />
     }</p>
     <h2>Pick Your Team</h2>
-    <button onClick={() => props.team('Chiefs')}> Kansas City</button>
-    <button onClick={() => props.team('Packers')}> Green Bay</button>
-    
+    <div className="Button">
+      <button onClick={() => props.team('Chiefs')}> Kansas City</button>
+      &nbsp;&nbsp;
+      <button onClick={() => props.team('Buccaneers')}> Tampa Bay</button>
+    </div>
+
+    <h2>Confirm Your Pick</h2>
+    <div className="Button">
+      <button onClick={()=>{ alert('You are confirmed CHIEFS'); }}>KC Chiefs</button>
+      &nbsp;&nbsp;
+      <button onClick={()=>{ alert('You are confirmed BUCS'); }}>TB Bucs</button>
+    </div>
         </div>
     
-    );
-    
+        
+  );
+   
 }
 
 export default DashboardPage;

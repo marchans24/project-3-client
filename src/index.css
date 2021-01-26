@@ -38,3 +38,10 @@ code {
   align-items: center;
   font-size: large;
 }
+
+.Button {
+  margin: 5px;
+  width: 20px;
+  height: auto;
+  display: inline;
+}

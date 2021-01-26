@@ -61,8 +61,7 @@ function App(props) {
     }
 
   useEffect(() => {
-    getAppData();
-    console.log('useEffect Called - Component mounted or updated')
+    getAppData()
   }, []);
 
   return (
