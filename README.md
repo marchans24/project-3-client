@@ -13,7 +13,7 @@ Screenshots:
 ![Application](./src/imgs/application.png)
 
 
-Technologies Used: HTML, CSS, JavaScript, Express, Express Middleware, Node, Mongoose, Heroku, MongoDB, React
+Technologies Used: HTML, CSS, JavaScript, Express, Node, Mongoose, Heroku, MongoDB, React, Netlify
 
 Application Link:
 https://super-bowl-special.netlify.app
