@@ -16,6 +16,25 @@ code {
   min-height: 100vh;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  margin-top: 30px;
   align-items: center;
+  font-size: xx-large;
+}
+
+.Signup {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  font-size: large;
+}
+
+.Login {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  font-size: large;
 }

@@ -39,20 +39,22 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="Page">
+        <div className="Login">
             <form onSubmit={handleSubmit}>
-                <input 
-                value={formState.email} 
-                onChange={handleChange} 
-                name="email" 
-                type="email" 
-                />
-                <input 
-                value={formState.password} 
-                onChange={handleChange} 
-                name="password" 
-                type="password" 
-                />
+                <label>Email:</label>
+                    <input 
+                    value={formState.email} 
+                    onChange={handleChange} 
+                    name="email" 
+                    type="email" 
+                    />
+                <label>Password:</label>
+                    <input 
+                    value={formState.password} 
+                    onChange={handleChange} 
+                    name="password" 
+                    type="password" 
+                    />
                 <button>Login</button>
             </form>
         </div>
